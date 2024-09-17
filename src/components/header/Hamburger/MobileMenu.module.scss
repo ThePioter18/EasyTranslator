@@ -1,0 +1,71 @@
+@import '../../../style/index.scss';
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+
+	.header {
+		@include d-flex-row();
+		justify-content: space-around;
+		align-items: center; /* Wyrównanie pionowe */
+		width: 100%; /* Nagłówek na całą szerokość */
+		padding: 2rem 2rem 2rem 2rem;
+		border-bottom: 1px solid #ccc; /* Linia pod nagłówkiem */
+		background-color: $white-color;
+		position: absolute;
+		top: 0;
+		border-radius: $border-radius;
+
+		&__logo {
+			cursor: pointer;
+		}
+
+		&__closeIcon {
+			cursor: pointer;
+			width: $hamburger-close-icon;
+		}
+	}
+
+	&__menuList {
+		text-align: center;
+		&__menuItem {
+			@include menuItem();
+			@include fonts(200);
+			@include d-flex-column();
+		}
+	}
+
+	&__logActionsList {
+		margin-top: 3rem;
+		@include d-flex-column();
+		@include fonts(600);
+		gap: 0.5rem;
+
+		&__item {
+			@include menuItem();
+			@include d-flex-column();
+			@include authButtons();
+		}
+
+		&__item_signup {
+			background-color: $light-beige-color;
+			color: $bronze-color;
+			text-align: center;
+			border: 4px solid $light-beige-color;
+			border-radius: $border-radius;
+		}
+		&__item_login {
+			border: 4px solid $blue-color;
+			border-radius: $border-radius;
+		}
+	}
+}
