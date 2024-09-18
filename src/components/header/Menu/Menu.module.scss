@@ -1,0 +1,21 @@
+@import '../../../style/index.scss';
+
+.menuList {
+	display: none;
+	@media screen and (min-width: $small-desktop) {
+		text-align: center;
+		@include d-flex-row();
+		gap: 5vw;
+		&__menuItem {
+			@include menuItem();
+			font-size: $menu-font-size-desktop;
+			@include fonts(500);
+			transition: scale, color, 0.7s;
+			will-change: scale, color;
+		}
+		&__menuItem:hover {
+			scale: 1.2;
+			color: $blue-color;
+		}
+	}
+}

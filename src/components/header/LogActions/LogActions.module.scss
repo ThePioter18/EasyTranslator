@@ -1,0 +1,24 @@
+@import '../../../style/index.scss';
+
+.logActionsList {
+	display: none;
+	@media screen and (min-width: $small-desktop) {
+		@include d-flex-row();
+		gap: 0.3rem;
+		&__item {
+			@include menuItem;
+			@include fonts(600);
+			@include d-flex-column();
+			@include authButtons();
+		}
+
+		&__item_signup {
+			@include beigeButtonStyle();
+		}
+
+		&__item_login {
+			border: 4px solid $blue-color;
+			border-radius: $border-radius;
+		}
+	}
+}

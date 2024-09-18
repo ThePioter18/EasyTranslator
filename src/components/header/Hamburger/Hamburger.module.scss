@@ -1,6 +1,11 @@
 @import '../../../style/index.scss';
 
-.hamburgerIcon {
-	width: $hamburger-icon;
-	cursor: pointer;
+.container {
+	&__hamburgerIcon {
+		width: $hamburger-icon;
+		cursor: pointer;
+	}
+	@media screen and (min-width: $small-desktop) {
+		display: none;
+	}
 }

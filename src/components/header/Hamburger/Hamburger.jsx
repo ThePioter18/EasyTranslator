@@ -12,11 +12,11 @@ function Hamburger() {
 	};
 
 	return (
-		<>
-			<img onClick={clickToggleHandler} className={s.hamburgerIcon} src={hamburger} alt='hamburger icons' />
+		<nav className={s.container}>
+			<img onClick={clickToggleHandler} className={s.container__hamburgerIcon} src={hamburger} alt='hamburger icons' />
 
 			{isMenuOpen ? <MobileMenu clickToggleHandler={clickToggleHandler} /> : null}
-		</>
+		</nav>
 	);
 }
 

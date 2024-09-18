@@ -18,7 +18,7 @@
 		justify-content: space-around;
 		align-items: center; /* Wyrównanie pionowe */
 		width: 100%; /* Nagłówek na całą szerokość */
-		padding: 2rem 2rem 2rem 2rem;
+		padding: 2rem;
 		border-bottom: 1px solid #ccc; /* Linia pod nagłówkiem */
 		background-color: $white-color;
 		position: absolute;
@@ -46,7 +46,6 @@
 
 	&__logActionsList {
 		margin-top: 3rem;
-		@include d-flex-column();
 		@include fonts(600);
 		gap: 0.5rem;
 
@@ -57,12 +56,9 @@
 		}
 
 		&__item_signup {
-			background-color: $light-beige-color;
-			color: $bronze-color;
-			text-align: center;
-			border: 4px solid $light-beige-color;
-			border-radius: $border-radius;
+			@include beigeButtonStyle();
 		}
+
 		&__item_login {
 			border: 4px solid $blue-color;
 			border-radius: $border-radius;
