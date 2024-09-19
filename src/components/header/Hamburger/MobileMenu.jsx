@@ -1,6 +1,6 @@
 import closeIcon from '../../../assets/close.svg';
 
-import s from '../Hamburger/MobileMenu.module.scss';
+import s from './MobileMenu.module.scss';
 import Logo from '../Logo/Logo';
 
 function MobileMenu({ clickToggleHandler }) {

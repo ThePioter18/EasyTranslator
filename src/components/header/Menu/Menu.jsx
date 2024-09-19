@@ -1,4 +1,4 @@
-import s from '../Menu/Menu.module.scss';
+import s from './Menu.module.scss';
 
 function Menu() {
 	return (

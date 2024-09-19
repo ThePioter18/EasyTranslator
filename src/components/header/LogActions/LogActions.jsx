@@ -1,4 +1,4 @@
-import s from '../LogActions/LogActions.module.scss';
+import s from './LogActions.module.scss';
 function LogActions() {
 	return (
 		<ul className={s.logActionsList}>

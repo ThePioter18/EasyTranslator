@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import hamburger from '../../../assets/hamburger.svg';
 
-import s from '../Hamburger/Hamburger.module.scss';
+import s from './Hamburger.module.scss';
 import MobileMenu from './MobileMenu';
 
 function Hamburger() {

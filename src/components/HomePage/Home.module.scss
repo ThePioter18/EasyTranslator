@@ -1,0 +1,113 @@
+@import '../../style/index.scss';
+
+.container {
+	height: 100vh;
+	@include d-flex-row;
+	padding-bottom: 200px;
+
+	&__containerLeft {
+		@media screen and (min-width: $small-desktop) {
+			padding-left: 120px;
+			padding-top: 20px;
+		}
+
+		&__info {
+			width: 90%;
+
+			@include d-flex-column;
+			gap: 3vh;
+			align-items: flex-start;
+
+			@media screen and (min-width: $tablet) {
+				gap: 5vh;
+			}
+			@media screen and (min-width: $small-desktop) {
+				width: 600px;
+			}
+
+			&__desc {
+				font-size: 1.3rem;
+				@include fonts(500);
+
+				@media screen and (min-width: $tablet) {
+					font-size: 3.375rem;
+				}
+			}
+
+			&__desc_smileIcon {
+				position: relative;
+				top: -4px;
+				margin: 0 10px;
+				width: 80px;
+				height: 80px;
+				vertical-align: middle; /* Wyrównanie do środka linii tekstu */
+			}
+
+			&__dess_contactMe {
+				color: $blue-color;
+			}
+		}
+
+		&__pencilIcon {
+			position: relative;
+			bottom: 160px;
+		}
+
+		&__action {
+			position: relative;
+			bottom: 120px;
+
+			@media screen and (min-width: $small-desktop) {
+				&__title {
+					font-size: 2.25rem;
+				}
+				&__desc {
+					font-size: 1rem;
+				}
+			}
+
+			&__calendarIcon {
+				margin-bottom: 0.7rem;
+			}
+
+			&__desc {
+				font-size: 1.125rem;
+				margin: 1rem 0;
+			}
+
+			&__btn {
+				background-color: $light-grey-color;
+				border: 4px solid $blue-color;
+				padding: 0.7rem 1rem;
+				border-radius: $border-radius;
+				margin-top: 1rem;
+
+				transition: scale, color, 0.7s;
+				will-change: scale, color;
+
+				@media screen and (min-width: $tablet) {
+					font-size: 1.25rem;
+				}
+			}
+
+			&__btn:hover {
+				scale: 1.07;
+				color: $blue-color;
+			}
+		}
+	}
+	&__containerRight {
+		&__imageSide {
+			display: none;
+			@media screen and (min-width: $small-desktop) {
+				display: flex;
+				width: 90%;
+				position: relative;
+				padding-bottom: 320px;
+			}
+			&__img {
+				width: 100%;
+			}
+		}
+	}
+}
