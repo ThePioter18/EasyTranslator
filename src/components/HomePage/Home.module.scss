@@ -1,11 +1,18 @@
 @import '../../style/index.scss';
 
 .container {
-	height: 100vh;
+	// height: 100vh;
 	@include d-flex-row;
-	padding-bottom: 200px;
+	padding-top: 50px;
 
 	&__containerLeft {
+		@media screen and (max-width: $small-desktop) {
+			@include d-flex-column();
+			width: 80%; /* Użyj procentów zamiast stałej wartości */
+			max-width: 500px; /* Maksymalna szerokość na większych ekranach */
+			align-items: flex-start;
+		}
+
 		@media screen and (min-width: $small-desktop) {
 			padding-left: 120px;
 			padding-top: 20px;
@@ -13,7 +20,6 @@
 
 		&__info {
 			width: 90%;
-
 			@include d-flex-column;
 			gap: 3vh;
 			align-items: flex-start;
@@ -26,11 +32,14 @@
 			}
 
 			&__desc {
-				font-size: 1.3rem;
 				@include fonts(500);
+				font-size: 2.4rem;
 
 				@media screen and (min-width: $tablet) {
-					font-size: 3.375rem;
+					font-size: 3.6rem;
+				}
+				@media screen and (min-width: $large-desktop) {
+					font-size: 5.4rem;
 				}
 			}
 
@@ -51,18 +60,24 @@
 		&__pencilIcon {
 			position: relative;
 			bottom: 160px;
+			&__img {
+				width: 100%; /* Użyj procentów zamiast stałej wartości */
+				padding-top: 100px;
+			}
 		}
 
 		&__action {
 			position: relative;
 			bottom: 120px;
 
-			@media screen and (min-width: $small-desktop) {
-				&__title {
-					font-size: 2.25rem;
+			&__title {
+				font-size: 2rem;
+
+				@media screen and (min-width: $tablet) {
+					font-size: 2.4rem;
 				}
-				&__desc {
-					font-size: 1rem;
+				@media screen and (min-width: $large-desktop) {
+					font-size: 3.6rem;
 				}
 			}
 
@@ -71,7 +86,7 @@
 			}
 
 			&__desc {
-				font-size: 1.125rem;
+				font-size: 1.8rem;
 				margin: 1rem 0;
 			}
 
@@ -86,7 +101,7 @@
 				will-change: scale, color;
 
 				@media screen and (min-width: $tablet) {
-					font-size: 1.25rem;
+					font-size: 1.8rem;
 				}
 			}
 
@@ -102,11 +117,13 @@
 			@media screen and (min-width: $small-desktop) {
 				display: flex;
 				width: 90%;
-				position: relative;
-				padding-bottom: 320px;
 			}
 			&__img {
 				width: 100%;
+				@media screen and (min-width: $large-desktop) {
+					position: relative;
+					bottom: 120px;
+				}
 			}
 		}
 	}

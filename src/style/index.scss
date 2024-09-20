@@ -17,7 +17,7 @@ $hamburger-close-icon: 40px;
 $hamburger-icon: 40px;
 
 //size desktop
-$menu-font-size-desktop: 1.125rem;
+$menu-font-size-desktop: 1.8rem;
 
 //mixins
 @mixin box-shadow() {
@@ -27,9 +27,15 @@ $menu-font-size-desktop: 1.125rem;
 }
 
 @mixin authButtons() {
-	width: 124px;
-	height: 80px;
-	font-size: 1.25rem;
+	width: 12.4rem;
+	height: 8rem;
+	font-size: 2rem;
+
+	@media screen and (max-width: 1300px) {
+		width: 8rem;
+		height: 6rem;
+		font-size: 1.6rem;
+	}
 }
 
 @mixin beigeButtonStyle() {
@@ -41,7 +47,7 @@ $menu-font-size-desktop: 1.125rem;
 }
 
 @mixin menuItem() {
-	font-size: 1.7rem;
+	font-size: 2.4rem;
 	margin: 2rem 0;
 	cursor: pointer;
 	color: $dark-color;
@@ -77,3 +83,4 @@ $menu-font-size-desktop: 1.125rem;
 
 $tablet: 700px;
 $small-desktop: 1024px;
+$large-desktop: 1300px;

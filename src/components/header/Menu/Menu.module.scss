@@ -12,6 +12,10 @@
 			@include fonts(500);
 			transition: scale, color, 0.7s;
 			will-change: scale, color;
+
+			@media screen and (max-width: $large-desktop) {
+				font-size: 1.6rem;
+			}
 		}
 		&__menuItem:hover {
 			scale: 1.2;

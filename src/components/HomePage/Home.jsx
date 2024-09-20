@@ -9,7 +9,6 @@ function Home() {
 		<section className={s.container}>
 			<section className={s.container__containerLeft}>
 				<section className={s.container__containerLeft__info}>
-					{/* <h1 className={s.container__info__title}>Easy Translator</h1> */}
 					<h1 className={s.container__containerLeft__info__desc}>
 						Translate anything you need, all you have to do is
 						<span className={s.container__containerLeft__info__dess_contactMe}> contact me</span>.<br></br>I will take
@@ -17,7 +16,7 @@ function Home() {
 						<img className={s.container__containerLeft__info__desc_smileIcon} src={smileIcon} alt='smile icon' />
 					</h1>
 					<div className={s.container__containerLeft__pencilIcon}>
-						<img src={pencilIcon} alt='pencil icon' />
+						<img className={s.container__containerLeft__pencilIcon__img} src={pencilIcon} alt='pencil icon' />
 					</div>
 				</section>
 
