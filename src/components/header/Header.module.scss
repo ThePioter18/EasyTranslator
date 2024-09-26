@@ -9,7 +9,8 @@
 	border-radius: $border-radius;
 	z-index: 1000;
 
-	@media screen and (max-width: $small-desktop) {
-		margin-top: 2rem;
+	margin-top: 2rem;
+	@include respond-to(small-desktop) {
+		margin-top: 0;
 	}
 }

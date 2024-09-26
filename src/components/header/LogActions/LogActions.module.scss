@@ -2,7 +2,8 @@
 
 .logActionsList {
 	display: none;
-	@media screen and (min-width: $small-desktop) {
+
+	@include respond-to(small-desktop) {
 		@include d-flex-row();
 		gap: 0.3rem;
 		&__item {

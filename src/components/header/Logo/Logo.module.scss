@@ -1,9 +1,10 @@
 @import '../../../style/index.scss';
 
 .logoIcon {
-	width: 250px;
+	width: 200px;
 
-	@media screen and (max-width: $large-desktop) {
-		width: 200px;
+	@media screen and (min-width: $desktop) {
+		width: 250px;
 	}
+	
 }

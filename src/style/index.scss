@@ -17,7 +17,7 @@ $hamburger-close-icon: 40px;
 $hamburger-icon: 40px;
 
 //size desktop
-$menu-font-size-desktop: 1.8rem;
+$menu-font-size-desktop: 1.6rem;
 
 //mixins
 @mixin box-shadow() {
@@ -81,6 +81,42 @@ $menu-font-size-desktop: 1.8rem;
 
 //breakepoints
 
-$tablet: 700px;
-$small-desktop: 1024px;
-$large-desktop: 1300px;
+$small-mobile: 320px;
+$mobile: 375px;
+$tablet: 768px;
+$small-desktop: 992px;
+$desktop: 1200px;
+$large-desktop: 1600px;
+
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == small-mobile {
+		@media (min-width: $small-mobile) {
+			@content;
+		}
+	}
+	@if $breakpoint == mobile {
+		@media (min-width: $mobile) {
+			@content;
+		}
+	}
+	@if $breakpoint == tablet {
+		@media (min-width: $tablet) {
+			@content;
+		}
+	}
+	@if $breakpoint == small-desktop {
+		@media (min-width: $small-desktop) {
+			@content;
+		}
+	}
+	@if $breakpoint == desktop {
+		@media (min-width: $desktop) {
+			@content;
+		}
+	}
+	@if $breakpoint == large-desktop {
+		@media (min-width: $large-desktop) {
+			@content;
+		}
+	}
+}

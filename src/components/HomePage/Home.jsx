@@ -30,7 +30,7 @@ function Home() {
 				</section>
 			</section>
 
-			<section className={s.containerRight}>
+			<section className={s.container__containerRight}>
 				<section className={s.container__containerRight__imageSide}>
 					<img className={s.container__containerRight__imageSide__img} src={imageSide} alt='home page image' />
 				</section>

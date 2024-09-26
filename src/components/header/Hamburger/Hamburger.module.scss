@@ -5,7 +5,8 @@
 		width: $hamburger-icon;
 		cursor: pointer;
 	}
-	@media screen and (min-width: $small-desktop) {
+
+	@include respond-to(small-desktop) {
 		display: none;
 	}
 }

@@ -1,55 +1,58 @@
 @import '../../style/index.scss';
 
 .container {
-	// height: 100vh;
-	@include d-flex-row;
-	padding-top: 50px;
+	padding: 3rem;
+
+	@include respond-to(small-desktop) {
+		@include d-flex-row;
+		padding-top: 0;
+	}
 
 	&__containerLeft {
-		@media screen and (max-width: $small-desktop) {
-			@include d-flex-column();
-			width: 80%; /* Użyj procentów zamiast stałej wartości */
-			max-width: 500px; /* Maksymalna szerokość na większych ekranach */
+		@include respond-to(small-desktop) {
+			padding-left: 120px;
 			align-items: flex-start;
 		}
-
-		@media screen and (min-width: $small-desktop) {
-			padding-left: 120px;
-			padding-top: 20px;
+		@include respond-to(large-desktop) {
+			padding-left: 160px;
 		}
 
 		&__info {
-			width: 90%;
-			@include d-flex-column;
-			gap: 3vh;
-			align-items: flex-start;
-
-			@media screen and (min-width: $tablet) {
-				gap: 5vh;
+			@include respond-to(small-desktop) {
+				align-items: flex-start;
+				max-width: 90%;
 			}
-			@media screen and (min-width: $small-desktop) {
-				width: 600px;
+
+			@include respond-to(desktop) {
+				max-width: 80%;
 			}
 
 			&__desc {
 				@include fonts(500);
 				font-size: 2.4rem;
+				text-align: center;
 
-				@media screen and (min-width: $tablet) {
+				@include respond-to(tablet) {
 					font-size: 3.6rem;
 				}
-				@media screen and (min-width: $large-desktop) {
+
+				@include respond-to(small-desktop) {
+					text-align: start;
+				}
+
+				@include respond-to(large-desktop) {
 					font-size: 5.4rem;
 				}
 			}
 
 			&__desc_smileIcon {
-				position: relative;
-				top: -4px;
 				margin: 0 10px;
-				width: 80px;
-				height: 80px;
+				width: 50px;
 				vertical-align: middle; /* Wyrównanie do środka linii tekstu */
+
+				@include respond-to(small-desktop) {
+					width: 80px;
+				}
 			}
 
 			&__dess_contactMe {
@@ -58,25 +61,53 @@
 		}
 
 		&__pencilIcon {
-			position: relative;
-			bottom: 160px;
+			margin-top: -20px;
+			margin-bottom: 20px;
+			text-align: center;
+
+			@include respond-to(mobile) {
+				margin-top: -70px;
+			}
+
+			@media screen and (min-width: 400px) {
+				width: 70%;
+				margin: -40px auto 40px;
+			}
+
+			@include respond-to(tablet) {
+				margin-top: -100px;
+				width: 50%;
+			}
+
+			@include respond-to(small-desktop) {
+				width: 100%;
+			}
+
 			&__img {
-				width: 100%; /* Użyj procentów zamiast stałej wartości */
-				padding-top: 100px;
+				width: 100%;
+
+				@include respond-to(large-desktop) {
+					width: 70%;
+					margin-right: 30rem;
+				}
 			}
 		}
 
 		&__action {
-			position: relative;
-			bottom: 120px;
+			@include d-flex-column;
+			align-items: center;
+
+			@include respond-to(small-desktop) {
+				align-items: flex-start;
+			}
 
 			&__title {
 				font-size: 2rem;
 
-				@media screen and (min-width: $tablet) {
+				@include respond-to(tablet) {
 					font-size: 2.4rem;
 				}
-				@media screen and (min-width: $large-desktop) {
+				@include respond-to(large-desktop) {
 					font-size: 3.6rem;
 				}
 			}
@@ -88,6 +119,7 @@
 			&__desc {
 				font-size: 1.8rem;
 				margin: 1rem 0;
+				text-align: center;
 			}
 
 			&__btn {
@@ -100,7 +132,7 @@
 				transition: scale, color, 0.7s;
 				will-change: scale, color;
 
-				@media screen and (min-width: $tablet) {
+				@include respond-to(tablet) {
 					font-size: 1.8rem;
 				}
 			}
@@ -114,15 +146,19 @@
 	&__containerRight {
 		&__imageSide {
 			display: none;
-			@media screen and (min-width: $small-desktop) {
+			@include respond-to(small-desktop) {
 				display: flex;
-				width: 90%;
+				width: 100%;
 			}
+
 			&__img {
 				width: 100%;
-				@media screen and (min-width: $large-desktop) {
-					position: relative;
-					bottom: 120px;
+				margin-right: 40rem;
+				@include respond-to(small-desktop) {
+					margin-top: -160px;
+				}
+				@include respond-to(large-desktop) {
+					margin-left: -190px;
 				}
 			}
 		}
