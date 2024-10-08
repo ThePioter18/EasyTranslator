@@ -1,20 +1,49 @@
 @import '../../style/index.scss';
 
 .container {
-	padding: 3rem;
+	margin: 8rem;
 
 	@include respond-to(small-desktop) {
 		@include d-flex-row;
-		padding-top: 0;
+		height: 100vh;
+		margin-top: -2rem;
+		margin-left: 4rem;
+	}
+
+	@include respond-to(desktop) {
+		margin-top: -6rem;
 	}
 
 	&__containerLeft {
+		&__top {
+			@media screen and (min-width: 992px) and (max-width: 1200px) {
+				margin-bottom: 15rem;
+			}
+		}
+
+		&__bottom {
+			@media screen and (min-width: 992px) and (max-width: 1200px) {
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				width: 90%;
+				bottom: 40px;
+			}
+		}
+
 		@include respond-to(small-desktop) {
-			padding-left: 120px;
+			padding-left: 50px;
 			align-items: flex-start;
 		}
+
+		@include respond-to(desktop) {
+			padding-left: 120px;
+			margin-top: 0;
+		}
+
 		@include respond-to(large-desktop) {
-			padding-left: 160px;
+			padding-left: 250px;
 		}
 
 		&__info {
@@ -38,6 +67,7 @@
 
 				@include respond-to(small-desktop) {
 					text-align: start;
+					font-size: 3.4rem;
 				}
 
 				@include respond-to(large-desktop) {
@@ -48,65 +78,79 @@
 			&__desc_smileIcon {
 				margin: 0 10px;
 				width: 50px;
-				vertical-align: middle; /* Wyrównanie do środka linii tekstu */
+				vertical-align: middle;
 
-				@include respond-to(small-desktop) {
+				@include respond-to(large-desktop) {
 					width: 80px;
 				}
 			}
 
-			&__dess_contactMe {
+			&__desc_contactMe {
 				color: $blue-color;
 			}
-		}
 
-		&__pencilIcon {
-			margin-top: -20px;
-			margin-bottom: 20px;
-			text-align: center;
+			&__pencilIcon {
+				margin-top: -20px;
+				margin-bottom: 20px;
+				text-align: center;
 
-			@include respond-to(mobile) {
-				margin-top: -70px;
-			}
-
-			@media screen and (min-width: 400px) {
-				width: 70%;
-				margin: -40px auto 40px;
-			}
-
-			@include respond-to(tablet) {
-				margin-top: -100px;
-				width: 50%;
-			}
-
-			@include respond-to(small-desktop) {
-				width: 100%;
-			}
-
-			&__img {
-				width: 100%;
-
-				@include respond-to(large-desktop) {
+				@media screen and (min-width: 400px) {
 					width: 70%;
-					margin-right: 30rem;
+					margin: -40px auto 40px;
+				}
+
+				@include respond-to(tablet) {
+					margin-top: -100px;
+					width: 50%;
+					margin: -40px auto 40px;
+				}
+
+				@include respond-to(small-desktop) {
+					width: 100%;
+					margin-bottom: -40px;
+				}
+
+				&__img {
+					width: 100%;
+					@include respond-to(small-desktop) {
+						position: relative;
+						top: -50px;
+					}
+					@include respond-to(large-desktop) {
+						width: 70%;
+						margin-right: 30rem;
+					}
 				}
 			}
 		}
-
 		&__action {
 			@include d-flex-column;
 			align-items: center;
 
 			@include respond-to(small-desktop) {
+				@include d-flex-row;
+				justify-content: flex-start;
+
+				align-items: flex-start;
+			}
+
+			@include respond-to(desktop) {
+				@include d-flex-column;
 				align-items: flex-start;
 			}
 
 			&__title {
 				font-size: 2rem;
+				margin: 0.5rem 0;
 
 				@include respond-to(tablet) {
 					font-size: 2.4rem;
 				}
+
+				@media screen and (min-width: 992px) and (max-width: 1200px) {
+					width: 20%;
+				}
+
 				@include respond-to(large-desktop) {
 					font-size: 3.6rem;
 				}
@@ -114,12 +158,33 @@
 
 			&__calendarIcon {
 				margin-bottom: 0.7rem;
+				margin-right: 0;
+
+				@include respond-to(small-desktop) {
+					margin-right: 1.5rem;
+				}
+
+				&__img {
+					width: 50px;
+					@include respond-to(large-desktop) {
+						width: 80px;
+					}
+				}
 			}
 
 			&__desc {
 				font-size: 1.8rem;
 				margin: 1rem 0;
 				text-align: center;
+
+				@include respond-to(small-desktop) {
+					text-align: start;
+				}
+
+				@media screen and (min-width: 992px) and (max-width: 1200px) {
+					margin: 1rem;
+					width: 45%;
+				}
 			}
 
 			&__btn {
@@ -135,6 +200,10 @@
 				@include respond-to(tablet) {
 					font-size: 1.8rem;
 				}
+
+				@media screen and (min-width: 992px) and (max-width: 1200px) {
+					margin-top: 0;
+				}
 			}
 
 			&__btn:hover {
@@ -148,17 +217,20 @@
 			display: none;
 			@include respond-to(small-desktop) {
 				display: flex;
-				width: 100%;
 			}
 
 			&__img {
 				width: 100%;
 				margin-right: 40rem;
+
 				@include respond-to(small-desktop) {
 					margin-top: -160px;
 				}
+
 				@include respond-to(large-desktop) {
-					margin-left: -190px;
+					margin-left: -40px;
+					margin-top: -80px;
+					width: 110%;
 				}
 			}
 		}

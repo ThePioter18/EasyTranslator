@@ -1,0 +1,68 @@
+@import '../../style/index.scss';
+
+.container {
+	@include d-flex-column;
+	padding: 10vh 0;
+	gap: 5vh;
+
+	@include respond-to(tablet) {
+		gap: 10vh;
+	}
+
+	&__header {
+		text-align: center;
+		font-size: 2.5rem;
+		color: $dark-color;
+		&__span {
+			color: $blue-color;
+		}
+	}
+	&__iconsWrapper {
+		display: grid;
+		grid-template-columns: 1;
+		gap: 5vh;
+
+		@include respond-to(tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__iconBox {
+			@include d-flex-row;
+			background-color: $light-beige-color;
+			border: 1px solid $blue-color;
+			padding: 1.5rem;
+			border-radius: $border-radius;
+			gap: 5vw;
+			transition: box-shadow, scale, cursor, 0.7s;
+			will-change: box-shadow, scale, cursor;
+			width: 100%;
+
+			@include respond-to(tablet) {
+				gap: 2vw;
+			}
+
+			&__img {
+				width: 100%;
+				max-width: 80px;
+				height: auto;
+
+				@media screen and (min-width: 512px) {
+					max-width: 150px;
+				}
+			}
+
+			&__name {
+				font-size: 2rem;
+				font-weight: 700;
+				color: $dark-color;
+			}
+		}
+		&__iconBox:hover {
+			@include box-shadow;
+			background-color: $dark-beige-color;
+
+			cursor: pointer;
+			scale: 1.1;
+		}
+	}
+}
