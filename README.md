@@ -36,23 +36,29 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 ```bash
 git clone https://github.com/ThePioter18/EasyTranslator.git
 cd EasyTranslator
+```
 
-1. Create a .env File
+### 1. Create a .env File
 Create a new file named .env in the root of the project.
 
-2. Add the following line to the .env file:
+### 2. Add the following line to the .env file:
+
+```bash
 VITE_API_URL=https://countriesnow.space/api/v0.1/countries/flag/images
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
 Run the following command to install the required dependencies:
+```bash
 npm install
+```
 
-4. Start the Application
+### 4. Start the Application
 Finally, start the application with:
+```bash
 npm start
-
-Your application should now be running at http://localhost:3000.
-
+```
+#### Your application should now be running at http://localhost:3000.
 
 
 ## 🛡 License
