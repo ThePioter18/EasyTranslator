@@ -3,6 +3,8 @@
 **Welcome to EasyTranslator!**  
 A business card website for professional document translation from various languages into Polish. Fast, reliable, and visually appealing!
 
+🔗 [Visit the Live Site](https://easytranslator.netlify.app) 
+
 ## 🔥 Key Features
 
 - **Built with React** ⚛️: A dynamic, fast, and responsive UI to present translation services.
