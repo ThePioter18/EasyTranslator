@@ -40,7 +40,7 @@ function LanguageSection() {
 
 	return (
 		<section className={s.container}>
-			<h1 className={s.container__header}>Languages</h1>
+			<h2 className={s.container__header}>Languages</h2>
 			<section className={s.container__iconsWrapper}>
 				{data.data
 					.filter(language => selectedCountries.includes(language.name))

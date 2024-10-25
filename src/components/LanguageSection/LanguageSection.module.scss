@@ -11,10 +11,15 @@
 
 	&__header {
 		text-align: center;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		color: $dark-color;
-		&__span {
-			color: $blue-color;
+
+		@include respond-to(tablet) {
+			font-size: 2.4rem;
+		}
+
+		@include respond-to(large-desktop) {
+			font-size: 3.6rem;
 		}
 	}
 	&__iconsWrapper {
