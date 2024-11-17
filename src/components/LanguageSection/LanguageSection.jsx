@@ -39,7 +39,7 @@ function LanguageSection() {
 	};
 
 	return (
-		<section className={s.container}>
+		<section className={s.container} id='languages'>
 			<h2 className={s.container__header}>Languages</h2>
 			<section className={s.container__iconsWrapper}>
 				{data.data

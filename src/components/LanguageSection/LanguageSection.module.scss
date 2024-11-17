@@ -10,8 +10,9 @@
 	}
 
 	&__header {
-		text-align: center;
+		padding-top: 100px; /* nav height + distance */
 		font-size: 2rem;
+		text-align: center;
 		color: $dark-color;
 
 		@include respond-to(tablet) {

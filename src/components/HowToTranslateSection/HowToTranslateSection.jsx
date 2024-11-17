@@ -7,7 +7,7 @@ import sendIcon from '../../assets/send.svg';
 function HowToTranslateSection() {
 	return (
 		<>
-			<div className={s.howToTranslateSection__container}>
+			<div className={s.howToTranslateSection__container} id='translations'>
 				<h2 className={s.howToTranslateSection__container__title}>
 					<span>What steps to take to translate your document</span>
 				</h2>
