@@ -2,9 +2,9 @@
 
 .logoIcon {
 	width: 200px;
+	padding: 10px;
 
 	@media screen and (min-width: $desktop) {
 		width: 250px;
 	}
-	
 }

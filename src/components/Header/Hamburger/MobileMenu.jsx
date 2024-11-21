@@ -8,7 +8,7 @@ function MobileMenu({ clickToggleHandler }) {
 		<>
 			<section className={s.container}>
 				<div className={s.header}>
-					<div className={s.header__logo}>
+					<div className={s.header__logo} onClick={clickToggleHandler}>
 						<Logo></Logo>
 					</div>
 
@@ -21,22 +21,22 @@ function MobileMenu({ clickToggleHandler }) {
 				</div>
 				<ul className={s.container___menuList}>
 					<li className={s.container__menuList__menuItem}>
-						<Link to='languages' smooth={true} duration={300} easing='easeInOutCubic'>
+						<Link onClick={clickToggleHandler} to='languages' smooth={true} duration={300} easing='easeInOutCubic'>
 							Languages
 						</Link>
 					</li>
 					<li className={s.container__menuList__menuItem}>
-						<Link to='translations' smooth={true} duration={300} easing='easeInOutCubic'>
+						<Link onClick={clickToggleHandler} to='translations' smooth={true} duration={300} easing='easeInOutCubic'>
 							Traslations
 						</Link>
 					</li>
 					<li className={s.container__menuList__menuItem}>
-						<Link to='price-list' smooth={true} duration={300} easing='easeInOutCubic'>
+						<Link onClick={clickToggleHandler} to='price-list' smooth={true} duration={300} easing='easeInOutCubic'>
 							Price list
 						</Link>
 					</li>
 					<li className={s.container__menuList__menuItem}>
-						<Link to='contact' smooth={true} duration={300} easing='easeInOutCubic'>
+						<Link onClick={clickToggleHandler} to='contact' smooth={true} duration={300} easing='easeInOutCubic'>
 							Contact
 						</Link>
 					</li>
