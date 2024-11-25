@@ -1,0 +1,154 @@
+@import '../../style/index.scss';
+
+.slideContainer {
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0;
+
+	&__title {
+		margin-bottom: 4rem;
+		font-size: 2rem;
+		text-align: center;
+
+		@include respond-to(tablet) {
+			font-size: 2.4rem;
+		}
+
+		@include respond-to(large-desktop) {
+			font-size: 3.6rem;
+		}
+	}
+
+	&__content {
+		margin: 0 40px;
+		@include d-flex-column;
+		margin-bottom: 4rem;
+
+		&__wrapper {
+			&__card {
+				position: relative;
+				max-width: 320px;
+				border-radius: 25px;
+				background-color: #ebe7e870;
+
+				&::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					bottom: 100px;
+					height: 60px;
+					width: 40px;
+					background-color: $first-color-light;
+				}
+
+				&__imgContent {
+					@include flex-center();
+					position: relative;
+					row-gap: 5px;
+
+					&__overlay {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 170px;
+						background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+						border-radius: 25px 25px 0 25px;
+
+						&::before,
+						&::after {
+							content: '';
+							position: absolute;
+							right: 0;
+							bottom: -40px;
+							height: 40px;
+							width: 40px;
+							background-color: #f794a4;
+						}
+
+						&::after {
+							border-radius: 0 25px 0 0;
+							background-color: $first-color-light;
+							border-left: 2px solid $first-color-light;
+						}
+					}
+
+					&__cardImage {
+						position: relative;
+						height: 150px;
+						width: 150px;
+						padding: 3px;
+						background-color: #fff;
+						border-radius: 50%;
+
+						&__img {
+							height: 100%;
+							width: 100%;
+							object-fit: cover;
+							border: 4px solid #f794a4;
+							border-radius: 50%;
+						}
+					}
+					&__cardContent {
+						@include flex-center();
+						line-height: 40px;
+						z-index: 1;
+						&__name {
+							padding-bottom: 1rem;
+							font-size: 2rem;
+							font-weight: 500;
+							font-style: italic;
+							color: #1a1818;
+						}
+						&__desc {
+							font-size: 1.6rem;
+							color: #888;
+							line-height: 1.4;
+
+							&.expanded {
+								text-align: justify;
+								width: 105%;
+								word-spacing: -2px;
+							}
+
+							&.collapsed {
+								height: 100px;
+								@include flex-center();
+								text-align: center;
+							}
+						}
+						&__btn {
+							margin: 1.4rem;
+							padding: 8px 16px;
+							font-size: 1.6rem;
+							color: #fff;
+							border: none;
+							border-radius: 6px;
+							background-color: #f794a4;
+							cursor: pointer;
+							transition: background-color 0.3s ease;
+						}
+						&__btn:hover {
+							background-color: #fdd6bd;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.customNext {
+	@media screen and (max-width: 768px) {
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
+.customPrev {
+	@media screen and (max-width: 768px) {
+		visibility: hidden;
+		pointer-events: none;
+	}
+}

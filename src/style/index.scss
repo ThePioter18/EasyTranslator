@@ -107,6 +107,15 @@ $menu-font-size-desktop: 1.6rem;
 	flex-direction: row;
 }
 
+// flex-center for clients services
+@mixin flex-center() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 14px;
+}
+
 //breakepoints
 
 $small-mobile: 320px;
