@@ -113,9 +113,10 @@
 							}
 
 							&.collapsed {
-								height: 100px;
 								@include flex-center();
 								text-align: center;
+								min-height: 160px;
+								max-height: auto;
 							}
 						}
 						&__btn {
@@ -150,5 +151,14 @@
 	@media screen and (max-width: 768px) {
 		visibility: hidden;
 		pointer-events: none;
+	}
+}
+
+@include respond-to(small-desktop) {
+	.slideContainer {
+		.collapsed {
+			height: 100px;
+			min-height: unset;
+		}
 	}
 }
