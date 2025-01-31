@@ -1,4 +1,18 @@
 @import '../../style/index.scss';
+//specific for card-client text color
+:global(body.dark-mode) .slideContainer {
+	&__content {
+		&__wrapper {
+			&__card__imgContent {
+				&__cardContent {
+					&__desc {
+						color: $text-color-cards-clients;
+					}
+				}
+			}
+		}
+	}
+}
 
 .slideContainer {
 	max-width: 1120px;
@@ -30,7 +44,7 @@
 				position: relative;
 				max-width: 320px;
 				border-radius: 25px;
-				background-color: #ebe7e870;
+				background-color: $first-color-light;
 
 				&::after {
 					content: '';
@@ -99,11 +113,11 @@
 							font-size: 2rem;
 							font-weight: 500;
 							font-style: italic;
-							color: #1a1818;
+							color: $title-color;
 						}
 						&__desc {
 							font-size: 1.6rem;
-							color: #888;
+							color: $text-color-cards-clients;
 							line-height: 1.4;
 
 							&.expanded {

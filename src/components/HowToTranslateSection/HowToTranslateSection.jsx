@@ -8,9 +8,7 @@ function HowToTranslateSection() {
 	return (
 		<>
 			<div className={s.howToTranslateSection__container} id='translations'>
-				<h2 className={s.howToTranslateSection__container__title}>
-					<span>What steps to take to translate your document</span>
-				</h2>
+				<h2 className={s.howToTranslateSection__container__title}>What steps to take to translate your document</h2>
 				<div className={s.howToTranslateSection__wrapper}>
 					<ul className={s.howToTranslateSection__list}>
 						<li className={s.howToTranslateSection__list__item}>

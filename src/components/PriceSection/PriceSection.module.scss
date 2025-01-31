@@ -1,5 +1,10 @@
 @import '../../style/index.scss';
 
+//specific for card text color
+:global(body.dark-mode) .card p {
+	color: $text-color;
+}
+
 .container {
 	@include d-flex-column;
 	padding: 5vh 0;
@@ -147,6 +152,9 @@
 				margin-right: 1rem;
 				font-size: 2.4rem;
 				color: $blue-color;
+			}
+			&__text {
+				color: $text-color;
 			}
 		}
 	}

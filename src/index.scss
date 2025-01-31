@@ -1,3 +1,5 @@
+@import '../src/style/index.scss';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -13,6 +15,18 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
+	// background: #eaeafd; // oder color
+}
+
+body.dark-mode {
+	background-color: $dark-mode-color-background;
+	color: $dark-mode-color-text;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+	color: $dark-mode-color-text;
 }
 
 a {

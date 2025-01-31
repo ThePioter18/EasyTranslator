@@ -1,5 +1,14 @@
 @import '../../style/index.scss';
 
+:global(body.dark-mode) .container {
+	&__containerRight {
+		&__iconToggleLight {
+			&__sunBtn:hover {
+				color: #fff;
+			}
+		}
+	}
+}
 .container {
 	margin: 8rem;
 
@@ -213,10 +222,46 @@
 		}
 	}
 	&__containerRight {
-		&__imageSide {
+		&__iconToggleLight {
 			display: none;
 			@include respond-to(small-desktop) {
+				margin-left: -25px;
+				position: relative;
+				bottom: -40px;
+
 				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			@include respond-to(large-desktop) {
+				margin-left: -50px;
+			}
+
+			&__sunText {
+				margin-right: 10px;
+				font-weight: 600;
+				font-size: 1.4rem;
+			}
+
+			&__sunBtn {
+				font-size: 5rem;
+				color: gold;
+				transition: color 0.3s;
+			}
+			&__sunBtn:hover {
+				color: black;
+				cursor: pointer;
+			}
+		}
+
+		&__imageSide {
+			position: relative;
+			display: none;
+
+			@include respond-to(small-desktop) {
+				display: flex;
+				z-index: -1;
 			}
 
 			&__img {
@@ -224,13 +269,17 @@
 				margin-right: 40rem;
 
 				@include respond-to(small-desktop) {
-					margin-top: -160px;
+					margin-top: -110px;
 				}
 
 				@include respond-to(large-desktop) {
 					margin-left: -40px;
 					margin-top: -80px;
 					width: 110%;
+				}
+
+				@media screen and (min-width: 2200px) {
+					margin-right: 0;
 				}
 			}
 		}

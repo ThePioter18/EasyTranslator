@@ -4,7 +4,7 @@ import pencilIcon from '../../assets/pencil.png';
 import calendarIcon from '../../assets/calendar.png';
 import imageSide from '../../assets/mainimages.svg';
 
-function Home() {
+function Home({ onToggle, isDarkMode }) {
 	return (
 		<section className={s.container}>
 			<section className={s.container__containerLeft}>
@@ -38,6 +38,17 @@ function Home() {
 			</section>
 
 			<section className={s.container__containerRight}>
+				<section className={s.container__containerRight__iconToggleLight}>
+					<p className={s.container__containerRight__iconToggleLight__sunText}>
+						{isDarkMode ? 'Dark Mode Enabled' : 'Light Mode Enabled'}
+					</p>
+
+					<button
+						onClick={() => onToggle(!isDarkMode)}
+						className={s.container__containerRight__iconToggleLight__sunBtn}>
+						☀︎
+					</button>
+				</section>
 				<section className={s.container__containerRight__imageSide}>
 					<img className={s.container__containerRight__imageSide__img} src={imageSide} alt='home page image' />
 				</section>

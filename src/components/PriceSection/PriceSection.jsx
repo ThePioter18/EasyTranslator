@@ -7,9 +7,7 @@ function PriceSection() {
 	return (
 		<>
 			<section className={s.container} id='price-list'>
-				<h2 className={s.container__title}>
-					<span>Price list</span>
-				</h2>
+				<h2 className={s.container__title}>Price list</h2>
 				<div className={s.wrapper}>
 					<div className={s.card}>
 						{/* === CARD 1 === */}
