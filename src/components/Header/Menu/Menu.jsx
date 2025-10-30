@@ -20,7 +20,7 @@ function Menu() {
 				</Link>
 			</li>
 			<li className={s.menuList__menuItem}>
-				<Link to='contact' smooth={true} duration={300} easing='easeInOutCubic'>
+				<Link to='contact-form' smooth={true} duration={300} easing='easeInOutCubic'>
 					Contact
 				</Link>
 			</li>

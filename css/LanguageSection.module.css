@@ -1,0 +1,101 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10vh 0;
+  gap: 5vh;
+}
+@media (min-width: 768px) {
+  .container {
+    gap: 10vh;
+  }
+}
+.container__header {
+  padding-top: 100px; /* nav height + distance */
+  font-size: 2rem;
+  text-align: center;
+  color: #2d2e2d;
+}
+@media (min-width: 768px) {
+  .container__header {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1600px) {
+  .container__header {
+    font-size: 3.6rem;
+  }
+}
+.container__iconsWrapper {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 5vh;
+}
+@media (min-width: 768px) {
+  .container__iconsWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.container__iconsWrapper__iconBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fffaf3;
+  border: 1px solid #0a6dc7;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+  gap: 5vw;
+  -webkit-transition: scale, cursor, 0.7s, -webkit-box-shadow;
+  transition: scale, cursor, 0.7s, -webkit-box-shadow;
+  transition: box-shadow, scale, cursor, 0.7s;
+  transition: box-shadow, scale, cursor, 0.7s, -webkit-box-shadow;
+  will-change: box-shadow, scale, cursor;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container__iconsWrapper__iconBox {
+    gap: 2vw;
+  }
+}
+.container__iconsWrapper__iconBox__img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+}
+@media screen and (min-width: 512px) {
+  .container__iconsWrapper__iconBox__img {
+    max-width: 150px;
+  }
+}
+.container__iconsWrapper__iconBox__name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2e2d;
+}
+.container__iconsWrapper__iconBox:hover {
+  -webkit-box-shadow: 12px 16px 9px -16px rgb(66, 68, 90);
+  box-shadow: 12px 16px 9px -16px rgb(66, 68, 90);
+  background-color: #ffe5c0;
+  cursor: pointer;
+  scale: 1.1;
+}/*# sourceMappingURL=LanguageSection.module.css.map */

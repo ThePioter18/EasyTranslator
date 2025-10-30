@@ -36,7 +36,7 @@ function MobileMenu({ clickToggleHandler }) {
 						</Link>
 					</li>
 					<li className={s.container__menuList__menuItem}>
-						<Link onClick={clickToggleHandler} to='contact' smooth={true} duration={300} easing='easeInOutCubic'>
+						<Link onClick={clickToggleHandler} to='contact-form' smooth={true} duration={300} easing='easeInOutCubic'>
 							Contact
 						</Link>
 					</li>

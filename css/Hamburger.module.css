@@ -1,0 +1,9 @@
+.container__hamburgerIcon {
+  width: 40px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .container {
+    display: none;
+  }
+}/*# sourceMappingURL=Hamburger.module.css.map */

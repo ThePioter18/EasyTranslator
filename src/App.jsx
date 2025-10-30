@@ -4,6 +4,7 @@ import HowToTranslateSection from './components/HowToTranslateSection/HowToTrans
 import LanguageSection from './components/LanguageSection/LanguageSection';
 import PriceSection from './components/PriceSection/PriceSection';
 import ClientsSection from './components/ClientsSection/ClientsSection';
+import ContactFormSection from './components/ContactFormSection/ContactFormSection';
 
 import { useState, useEffect } from 'react';
 import Toggle from './components/Toggle/Toggle';
@@ -36,6 +37,7 @@ function App() {
 			<HowToTranslateSection></HowToTranslateSection>
 			<PriceSection></PriceSection>
 			<ClientsSection></ClientsSection>
+			<ContactFormSection></ContactFormSection>
 		</div>
 	);
 }

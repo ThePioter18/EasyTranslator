@@ -1,0 +1,69 @@
+:global(body.dark-mode) .toggleSwitch .toggleText {
+  top: 30px;
+  color: #fff;
+  padding-left: 10px;
+}
+:global(body.dark-mode) .toggleSwitch .toggleText .arrow {
+  font-size: 1.6rem;
+}
+:global(body.dark-mode) .toggleSwitch .toggleText .mode {
+  padding-left: 16px;
+}
+
+.toggleContainer {
+  position: fixed;
+  top: 80px;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.toggleSwitch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 50px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #333;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.toggleSwitch .toggleText {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80px;
+  font-size: 1.4rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  color: #000;
+}
+.toggleSwitch:hover .toggleText {
+  opacity: 1;
+  visibility: visible;
+}
+.toggleSwitch .toggleThumb {
+  position: absolute;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.toggleSwitch.toggled .toggleThumb {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}/*# sourceMappingURL=Toggle.module.css.map */

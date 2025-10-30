@@ -1,0 +1,81 @@
+.logActionsList {
+  display: none;
+}
+@media (min-width: 992px) {
+  .logActionsList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.3rem;
+  }
+  .logActionsList__item {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    color: #2d2e2d;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 12.4rem;
+    height: 8rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+  .logActionsList__item {
+    width: 8rem;
+    height: 6rem;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .logActionsList__item_signup {
+    background-color: #fffaf3;
+    color: #915d0a;
+    text-align: center;
+    border: 4px solid #ffe5c0;
+    border-radius: 0.7rem;
+    -webkit-transition: border, color, 0.3s;
+    transition: border, color, 0.3s;
+    will-change: border, color;
+  }
+  .logActionsList__item_signup:hover {
+    border: 6px solid #ffe5c0;
+    color: rgb(164, 199, 36);
+  }
+  .logActionsList__item_login {
+    border: 4px solid #0a6dc7;
+    border-radius: 0.7rem;
+    -webkit-transition: background-color, color, 0.3s;
+    transition: background-color, color, 0.3s;
+    will-change: border, color;
+  }
+  .logActionsList__item_login:hover {
+    color: #fafbfd;
+    background-color: #0a6dc7;
+  }
+}/*# sourceMappingURL=LogActions.module.css.map */
