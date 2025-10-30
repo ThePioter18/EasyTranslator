@@ -3,6 +3,8 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import s from './ContactFormSection.module.scss';
 
+import contactInformationPNG from '../../assets/contact-information.png';
+
 // Zod validation scheme
 const contactSchema = z.object({
 	name: z.string().min(2, 'The name must be at least 2 characters long'),
@@ -102,7 +104,7 @@ export default function ContactForm() {
 							</div>
 						</div>
 						<div className={s.contact_information__graphic_mess_show}>
-							<img src='src/assets/contact-information.png' alt='contact information' />
+							<img src={contactInformationPNG} alt='contact information' />
 						</div>
 					</div>
 				</div>
