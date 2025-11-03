@@ -3,6 +3,7 @@ import smileIcon from '../../assets/smile.png';
 import pencilIcon from '../../assets/pencil.png';
 import calendarIcon from '../../assets/calendar.png';
 import imageSide from '../../assets/mainimages.svg';
+import { Link } from 'react-scroll';
 
 function Home({ onToggle, isDarkMode }) {
 	return (
@@ -32,7 +33,11 @@ function Home({ onToggle, isDarkMode }) {
 						</div>
 						<h2 className={s.container__containerLeft__action__title}>Fast and Easy</h2>
 						<p className={s.container__containerLeft__action__desc}>Contact me and let is start working together.</p>
-						<button className={s.container__containerLeft__action__btn}>Get Started</button>
+						<button className={s.container__containerLeft__action__btn}>
+							<Link to='contact-form' smooth={true} duration={300} easing='easeInOutCubic'>
+								Get Started
+							</Link>
+						</button>
 					</section>
 				</section>
 			</section>
