@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 function Home({ onToggle, isDarkMode }) {
 	return (
-		<section className={s.container}>
+		<section className={s.container} id='home'>
 			<section className={s.container__containerLeft}>
 				<section className={s.container__containerLeft__top}>
 					<section className={s.container__containerLeft__info}>

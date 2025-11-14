@@ -1,11 +1,22 @@
 import logo from '../../../assets/logo.png';
 import s from './Logo.module.scss';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 function Logo() {
+	const location = useLocation();
+	const isHomePage = location.pathname === '/';
 	return (
-		<a href='#' className='logo'>
-			<img className={s.logoIcon} src={logo} alt='pages Logo' />
-		</a>
+		<>
+			{isHomePage ? (
+				<a href='/' className={s.logo} aria-label='Go to home page'>
+					<img className={s.logoIcon} src={logo} alt='EasyTranslator Logo brand' />
+				</a>
+			) : (
+				<RouterLink to='/' className={s.logo} aria-label='Go to home page'>
+					<img className={s.logoIcon} src={logo} alt='EasyTranslator Logo brand' />
+				</RouterLink>
+			)}
+		</>
 	);
 }
 

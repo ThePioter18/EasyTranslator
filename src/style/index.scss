@@ -11,6 +11,9 @@ $title-color: #22262b;
 $text-color: #4f5964;
 $text-color-light: #9ba6b0;
 $text-color-cards-clients: #888;
+$orange-light-color-footer: #ffcc00;
+$orange-color-footer: #ff9900;
+$pink-color-footer-divider: #eeaaaa;
 
 $white-color: #fafbfd;
 $dark-color: #2d2e2d;
@@ -123,6 +126,22 @@ $menu-font-size-desktop: 1.6rem;
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
+}
+
+@mixin background-cover($url) {
+	background: url($url);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin logo-size {
+	width: 200px;
+	padding: 10px;
+
+	@media screen and (min-width: $desktop) {
+		width: 250px;
+	}
 }
 
 //breakepoints

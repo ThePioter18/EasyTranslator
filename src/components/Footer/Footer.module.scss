@@ -1,0 +1,197 @@
+@import '../../style/index.scss';
+
+//change color for logo brand in footer dark mode
+:global(body.dark-mode) .footerBrand {
+	&__logo {
+		background-color: $white-color;
+	}
+}
+
+@include respond-to(small-desktop) {
+	:global(body.dark-mode) .linkGroup {
+		&__containerLinks {
+			@include background-cover('../../assets/blob-scene-haikei-yellow-dark-mode.svg');
+		}
+
+		&__socialmedia {
+			@include background-cover('../../assets/blob-scene-haikei-orange-dark-mode.svg');
+		}
+	}
+}
+
+.container {
+	padding-top: 5vh;
+}
+
+.wrapper {
+	@include flex-center;
+	padding: 0;
+}
+
+.footerBrand {
+	cursor: pointer;
+	&__logo {
+		@include logo-size;
+	}
+}
+
+.linkGroup {
+	text-align: center;
+	margin: 0.5rem auto;
+
+	&__title {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+	&__links {
+		font-size: 1.6rem;
+	}
+
+	&__socialmedia,
+	&__links {
+		@include flex-center;
+	}
+
+	&__orderList {
+		li:first-child {
+			margin-bottom: 1rem;
+		}
+
+		li {
+			margin-bottom: 1rem;
+			transition: color 0.3s;
+
+			i {
+				margin-right: 1rem;
+			}
+		}
+
+		li:hover {
+			color: $orange-color-footer;
+		}
+	}
+
+	&__orderItem {
+		cursor: pointer;
+	}
+}
+
+.footerDivider {
+	&__solidLine {
+		margin: 0 4rem;
+		border: none;
+		height: 2px;
+		opacity: 0.2;
+		background-color: $text-color-light;
+
+		@include respond-to(tablet) {
+			margin: 0 10rem;
+		}
+
+		@include respond-to(small-desktop) {
+			margin: 0 16rem;
+			opacity: 0.5;
+			background-color: $pink-color-footer-divider;
+		}
+		@include respond-to(desktop) {
+			margin: 0 28rem;
+		}
+	}
+}
+
+.footerCopyright {
+	margin: 2rem 0;
+	&__text {
+		&__year,
+		&__repo {
+			padding-top: 1rem;
+			text-align: center;
+			font-size: 1.6rem;
+
+			span {
+				display: block;
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+			}
+
+			a {
+				padding: 0 0.5rem;
+				color: $orange-light-color-footer;
+				text-decoration: none;
+				font-weight: bold;
+				transition: color 0.3s;
+			}
+
+			a:hover {
+				color: $orange-color-footer;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@include respond-to(tablet) {
+	.linkGroup {
+		&__first,
+		&__second {
+			@include d-flex-row;
+			justify-content: center;
+		}
+		&__orderList {
+			@include d-flex-row;
+			margin: 1rem 0;
+
+			li:first-child {
+				margin-bottom: 0;
+			}
+			li {
+				margin: 0 2rem;
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.footerCopyright {
+		margin: 5rem 0;
+		&__text {
+			&__year,
+			&__repo {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+@include respond-to(small-desktop) {
+	.linkGroup {
+		width: 100%;
+
+		&__containerLinks {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include background-cover('../../assets/blob-scene-haikei-yellow.svg');
+		}
+
+		//styles only for the first two children
+		&__containerLinks > :nth-child(-n + 2) {
+			flex: 1 1 calc(50% - 6px);
+		}
+		&__containerLinks > :nth-child(n + 3) {
+			flex: 1 1 100%;
+		}
+		&__orderList {
+			li {
+				font-size: 2rem;
+			}
+		}
+
+		&__socialmedia {
+			@include background-cover('../../assets/blob-scene-haikei.svg');
+		}
+	}
+
+	.footerCopyright {
+		margin: 8rem 0;
+	}
+}
