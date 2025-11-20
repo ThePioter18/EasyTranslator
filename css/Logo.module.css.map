@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/components/Header/Logo/Logo.module.scss","Logo.module.css"],"names":[],"mappings":"AAEA;EACC,YAAA;EACA,aAAA;ACDD;ADGC;EAJD;IAKE,YAAA;ECAA;AACF","file":"Logo.module.css"}
+{"version":3,"sources":["../src/components/Header/Logo/Logo.module.scss","../src/style/index.scss","Logo.module.css"],"names":[],"mappings":"AAEA;ECwIC,YAAA;EACA,aAAA;ACxID;AD0IC;ED3ID;IC4IE,YAAA;ECvIA;AACF","file":"Logo.module.css"}
