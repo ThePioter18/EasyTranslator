@@ -10,16 +10,6 @@ export default function Footer() {
 			<section className={s.container}>
 				<div className={s.wrapper}>
 					<div className={s.footerBrand}>
-						{/* <ScrollLink
-							to='home'
-							smooth={true}
-							duration={300}
-							easing='easeInOutCubic'
-							aria-label='back to top'
-							title='Back to top'
-							className={s.footerBrand__link}>
-							<img className={s.footerBrand__logo} src={logo} alt='EasyTranslator Logo Brand' />
-						</ScrollLink> */}
 
 						{/*Back to home main */}
 						{useLocation().pathname === '/' ? (
@@ -45,16 +35,6 @@ export default function Footer() {
 								<h2 className={s.linkGroup__title}>About</h2>
 								<div className={s.linkGroup__links}>
 									<ul className={s.linkGroup__orderList}>
-										{/* <li className={s.linkGroup__orderItem}>
-											<ScrollLink to='home' smooth={true} duration={300} easing='easeInOutCubic'>
-												EasyTranslator
-											</ScrollLink>
-										</li>
-										<li className={s.linkGroup__orderItem}>
-											<ScrollLink to='price-list' smooth={true} duration={300} easing='easeInOutCubic'>
-												Translation Offers
-											</ScrollLink>
-										</li> */}
 
 										{/*Back to home main */}
 										<li className={s.linkGroup__orderItem}>
