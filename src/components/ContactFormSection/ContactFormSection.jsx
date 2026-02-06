@@ -86,19 +86,19 @@ export default function ContactForm() {
 						<div className={s.contact_information__contact}>
 							<div className={s.contact_information__contact__item}>
 								<i className={s.contact_information__contact__item__icon}>
-									<i className='ti ti-map-pin-filled'></i>
+									<i className='ti ti-map-pin'></i>
 								</i>
 								<span className={s.contact_information__contact__item__text}>Warsaw, Poland</span>
 							</div>
 							<div className={s.contact_information__contact__item}>
 								<i className={s.contact_information__contact__item__icon}>
-									<i className='ti ti-phone-filled'></i>
+									<i className='ti ti-phone'></i>
 								</i>
 								<span className={s.contact_information__contact__item__text}>606-234-098</span>
 							</div>
 							<div className={s.contact_information__contact__item}>
 								<i className={s.contact_information__contact__item__icon}>
-									<i className='ti ti-mail-filled'></i>
+									<i className='ti ti-mail'></i>
 								</i>
 								<span className={s.contact_information__contact__item__text}>easytranslator@gmail.com</span>
 							</div>
