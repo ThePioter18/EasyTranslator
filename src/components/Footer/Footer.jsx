@@ -3,14 +3,16 @@ import logo from '../../assets/logo.png';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import s from './Footer.module.scss';
+import Chat from './ChatWindow.jsx';
 
 export default function Footer() {
 	return (
 		<>
 			<section className={s.container}>
 				<div className={s.wrapper}>
-					<div className={s.footerBrand}>
+					<Chat />
 
+					<div className={s.footerBrand}>
 						{/*Back to home main */}
 						{useLocation().pathname === '/' ? (
 							<ScrollLink
@@ -35,7 +37,6 @@ export default function Footer() {
 								<h2 className={s.linkGroup__title}>About</h2>
 								<div className={s.linkGroup__links}>
 									<ul className={s.linkGroup__orderList}>
-
 										{/*Back to home main */}
 										<li className={s.linkGroup__orderItem}>
 											{useLocation().pathname === '/' ? (

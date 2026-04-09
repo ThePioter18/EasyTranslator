@@ -1,4 +1,9 @@
-# Logs
+# =============================================
+# .gitignore dla projektu EasyTranslator
+# React + Vite + Netlify + Groq AI
+# =============================================
+
+# === Logi i debugowanie ===
 logs
 *.log
 npm-debug.log*
@@ -7,12 +12,28 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# === Zależności ===
 node_modules
+.pnpm-store
+
+# === Wyniki budowania ===
 dist
 dist-ssr
+build
 *.local
+
+# === Pliki środowiskowe (bardzo ważne!) ===
 .env
-# Editor directories and files
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# === Lokalne pliki Netlify (nie commitujemy) ===
+.netlify
+.netlify/*
+
+# === Edytory i IDE ===
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +43,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# === Pliki tymczasowe i cache ===
+coverage
+*.tmp
+*.temp
+Thumbs.db
+
+# === Systemowe pliki macOS i Windows ===
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
